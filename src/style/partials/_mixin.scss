@@ -4,6 +4,7 @@
 // ES di mixin -> FLEX
 
 // Questa propietà può essere richiamata in un component tramite @include nome proprità (in questo caso flex) e gli attributi che si vogliono dentro parentesi tonde(es: row, center, center)  
+
 @mixin flex($direction, $justify-content, $align-items) {
     display: flex;
     flex-direction: $direction;
