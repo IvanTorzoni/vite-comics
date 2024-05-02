@@ -5,9 +5,18 @@
 
 // Questa propietà può essere richiamata in un component tramite @include nome proprità (in questo caso flex) e gli attributi che si vogliono dentro parentesi tonde(es: row, center, center)  
 
+// Proprietà flex
 @mixin flex($direction, $justify-content, $align-items) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify-content;
     align-items: $align-items;
+}
+
+// Container
+@mixin container($justify-content, $width, $margin) {
+    display: flex;
+    justify-content: $justify-content;
+    width: $width;
+    margin: $margin auto;
 }

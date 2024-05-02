@@ -52,16 +52,18 @@
 
 <template>
     <header>
-        <!-- Logo -->
-        <span class="header-logo">
-            <img src="../assets/img/dc-logo.png" alt="DC logo">
-        </span>
-        <!-- Menù dinamico -->
-        <ul class="navigation">
-            <li v-for="item in menu">
-                <a href="" :class="{ active : item.isActive = true }"> {{ item.title }} </a>
-            </li>
-        </ul>
+        <div class="container">
+            <!-- Logo -->
+            <span class="header-logo">
+                <img src="../assets/img/dc-logo.png" alt="DC logo">
+            </span>
+            <!-- Menù dinamico -->
+            <ul class="navigation">
+                <li v-for="item in menu">
+                    <a href="" :class="{ active : item.isActive = true }"> {{ item.title }} </a>
+                </li>
+            </ul>
+        </div>
     </header>
 </template>
 
@@ -71,9 +73,8 @@
     @use "../style/partials/variables" as *;
 
 
-    header {
-        display: flex;
-        justify-content: space-between;
+    .container {
+        @include container(space-between, 80%, 0);
 
         ul {
             @include flex(row, center, center);
