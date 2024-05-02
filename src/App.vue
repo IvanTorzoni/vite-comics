@@ -14,8 +14,7 @@ export default {
 </script>
 
 <template>
-    <h1>CIAO SONO TOP A TUTTO</h1>
-    
+
     <AppHeader />
     <AppMain />
     <AppFooter />
