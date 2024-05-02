@@ -10,7 +10,7 @@
                     },
                     {
                         title: "COMICS",
-                        // isActive: true,
+                        isActive: true,
                     },
                     {
                         title: "MOVIES",
@@ -60,7 +60,7 @@
             <!-- Menù dinamico -->
             <ul class="navigation">
                 <li v-for="item in menu">
-                    <a href="" :class="{ active : item.isActive = true }"> {{ item.title }} </a>
+                    <a href="" :class="{ active : item.isActive }"> {{ item.title }} </a>
                 </li>
             </ul>
         </div>
@@ -75,6 +75,10 @@
 
     .container {
         @include container(space-between, 80%, 0);
+
+        .header-logo{
+            margin-top: 20px
+        }
 
         ul {
             @include flex(row, center, center);

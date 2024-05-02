@@ -87,12 +87,14 @@ export default {
     }
 
     .pay{
-        width: 50%
+        width: 30%
     }
 
     .options{
         display: flex;
-        align-items: center
+        align-items: center;
+        width: 15%
+        
     }
 
     .container {
