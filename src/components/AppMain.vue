@@ -1,7 +1,42 @@
 <script>
 export default {
-
-}
+  data() {
+    return {
+      icons: [
+        {
+          image: "buy-comics-digital-comics.png",
+          text: "DIGITAL COMICS",
+          isSvg: false,
+        },
+        {
+          image: "buy-comics-merchandise.png",
+          text: "DC MERCHANDISE",
+          isSvg: false,
+        },
+        {
+          image: "buy-comics-subscriptions.png",
+          text: "SUBSCRIPTION",
+          isSvg: false,
+        },
+        {
+          image: "buy-comics-shop-locator.png",
+          text: "COMICS SHOP LOCATOR",
+          isSvg: false,
+        },
+        {
+          image: "buy-dc-power-visa.svg",
+          text: "DC POWER VISA",
+          isSvg: true,
+        },
+      ],
+    };
+  },
+  methods: {
+    getImagePath(curImage) {
+      return new URL(`../assets/img/${curImage}`, import.meta.url).href;
+    },
+  },
+};
 
 </script>
 
@@ -13,25 +48,9 @@ export default {
     </section>
     <section class="images">
         <div class="container">
-            <div class="options">
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="Digital Comic">
-                <span>DIGITAL COMICS</span>
-            </div>
-            <div class="options">
-                <img src="../assets/img/buy-comics-merchandise.png" alt="Merch">
-                <span>DC MERCHANDISE</span>
-            </div>
-            <div class="options">
-                <img src="../assets/img/buy-comics-subscriptions.png" alt="Subscription">
-            <span>SUBSCRIPTION</span>                
-            </div>
-            <div class="options">
-                <img src="../assets/img/buy-comics-shop-locator.png" alt="Closest Store">
-            <span>COMIC SHOP LOCATOR</span>                
-            </div>
-            <div class="options">
-                <img class="pay" src="../assets/img/buy-dc-power-visa.svg" alt="Payment methods">
-            <span>DC POWER VISA</span>                
+            <div class="options" v-for="icon in icons">
+                <img :src="getImagePath(icon.image)" :class="{pay : isSvg = true}" alt="Digital Comic">
+                <span>{{ icon.text }}</span>
             </div>
         </div>
     </section>
@@ -63,12 +82,12 @@ export default {
     height: 200px;
 
     img{
-        max-width: 50%;
+        max-width: 100%;
         padding-right: 30px;
     }
 
     .pay{
-        width: 40%
+        width: 50%
     }
 
     .options{
