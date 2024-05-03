@@ -2,7 +2,7 @@
     export default {
         data() {
             return {
-                // Inserimento del menù di navigazione dinamico - WIP classe dinamica
+                // Inserimento del menù di navigazione dinamico
                 menu: [
                     {
                         title: "CHARACTERS",
@@ -84,16 +84,21 @@
             @include flex(row, center, center);
             list-style-type: none;
 
-            a {
-                color: $text-color-nav;
-                font-size: 16px;
-                padding: 10px 16px;
-                text-decoration: none;
-                display: inline-block;
-            }
+            li {
 
-            .active {
-                color: blue
+                &.active {
+                    a {
+                        color: blue
+                    }
+                }
+
+                a {
+                    color: $text-color-nav;
+                    font-size: 16px;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: inline-block;
+                }
             }
         }
     }
