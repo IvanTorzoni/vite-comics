@@ -78,11 +78,11 @@
 
         header {
             height: 100px;
-            line-height: 80px;
+            line-height: 85px;
         }
 
         .header-logo{
-            margin-top: 20px
+            margin-top: 10px
         }
 
         ul {
