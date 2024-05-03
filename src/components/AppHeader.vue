@@ -88,7 +88,8 @@
 
                 &.active {
                     a {
-                        color: blue
+                        color: $text-colore-active-nav
+                        
                     }
                 }
 
