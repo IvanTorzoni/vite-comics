@@ -6,7 +6,7 @@
                 menu: [
                     {
                         title: "CHARACTERS",
-                        // isActive: false,
+                        isActive: false,
                     },
                     {
                         title: "COMICS",
@@ -14,35 +14,35 @@
                     },
                     {
                         title: "MOVIES",
-                        // isActive: false,
+                        isActive: false,
                     },
                     {
                         title: "TV",
-                        // isActive: false,
+                        isActive: false,
                     },
                     {
                         title: "GAMES",
-                        // isActive: false,
+                        isActive: false,
                     },
                     {
                         title: "COLLECTABLES",
-                        // isActive: false,
+                        isActive: false,
                     },
                     {
                         title: "VIDEOS",
-                        // isActive: false,
+                        isActive: false,
                     },
                     {
                         title: "FANS",
-                        // isActive: false,
+                        isActive: false,
                     },
                     {
                         title: "NEWS",
-                        // isActive: false,
+                        isActive: false,
                     },
                     {
                         title: "SHOP",
-                        // isActive: false,
+                        isActive: false,
                     },
                 ],
             };
@@ -59,8 +59,8 @@
             </span>
             <!-- Menù dinamico -->
             <ul class="navigation">
-                <li v-for="item in menu">
-                    <a href="" :class="{ active : item.isActive }"> {{ item.title }} </a>
+                <li v-for="item in menu" :class="{ active : item.isActive }">
+                    <a href="" > {{ item.title }} </a>
                 </li>
             </ul>
         </div>
@@ -90,6 +90,10 @@
                 padding: 10px 16px;
                 text-decoration: none;
                 display: inline-block;
+            }
+
+            .active {
+                color: blue
             }
         }
     }
