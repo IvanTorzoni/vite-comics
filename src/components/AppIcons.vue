@@ -71,14 +71,14 @@ export default {
     .options{
       &.pay {
           img {
-            width: 50%
+            width: 40%;
+            height: 50px;
           }
       }
 
         display: flex;
         align-items: center;
-        width: 15%
-        
+        height: 50px
     }
 
     .container {
