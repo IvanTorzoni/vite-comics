@@ -76,6 +76,11 @@
     .container {
         @include container(space-between, 80%, 0);
 
+        header {
+            height: 100px;
+            line-height: 80px;
+        }
+
         .header-logo{
             margin-top: 20px
         }
@@ -88,8 +93,8 @@
 
                 &.active {
                     a {
-                        color: $text-colore-active-nav
-                        
+                        color: $text-colore-active-nav;
+                        border-bottom: 5px solid blue;
                     }
                 }
 
