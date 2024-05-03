@@ -43,8 +43,8 @@ export default {
 <template>
     <section class="images">
         <div class="container">
-            <div class="options" v-for="icon in icons">
-                <img :src="getImagePath(icon.image)" :class="{pay : isSvg = true}" alt="Digital Comic">
+            <div class="options" v-for="icon in icons" :class="{pay : isSvg}">
+                <img :src="getImagePath(icon.image)" alt="Digital Comic">
                 <span>{{ icon.text }}</span>
             </div>
         </div>
@@ -68,11 +68,13 @@ export default {
         padding-right: 30px;
     }
 
-    .pay{
-        width: 40%
-    }
-
     .options{
+      &.pay {
+          img {
+            width: 50%
+          }
+      }
+
         display: flex;
         align-items: center;
         width: 15%
