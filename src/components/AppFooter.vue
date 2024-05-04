@@ -1,6 +1,31 @@
 <script>
 export default {
-
+    data() {
+    return {
+      icons: [
+        {
+          image: "footer-facebook.png",
+        },
+        {
+          image: "footer-twitter.png",
+        },
+        {
+          image: "footer-youtube.png",
+        },
+        {
+          image: "footer-pinterest.png",
+        },
+        {
+          image: "footer-periscope.png",
+        },
+      ],
+    };
+  },
+  methods: {
+    getImagePath(curImage) {
+      return new URL(`../assets/img/${curImage}`, import.meta.url).href;
+    },
+  },
 }
 
 </script>
@@ -14,11 +39,7 @@ export default {
                 </div>
                 <div class="icons">
                     <span>Follow Us</span>
-                    <img src="../assets/img/footer-facebook.png" alt="">
-                    <img src="../assets/img/footer-twitter.png" alt="">
-                    <img src="../assets/img/footer-youtube.png" alt="">
-                    <img src="../assets/img/footer-pinterest.png" alt="">
-                    <img src="../assets/img/footer-periscope.png" alt="">
+                    <a href="" v-for="social in icons"><img :src="getImagePath(social.image)" alt=""></a>
                 </div>
             </div>
 
