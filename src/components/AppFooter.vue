@@ -55,7 +55,7 @@ export default {
 
 .footer {
     height: 100px;
-    background-color: #303030;
+    background-color: $bg-color-footer;
 
     .container {
         @include container(space-between, 80%, 0);
@@ -73,7 +73,7 @@ export default {
 
                 a {
                     padding: 10px;
-                    border: 2px solid #0085ff;
+                    border: 2px solid $border-color-sign-up;
                     text-decoration: none;
                     color: white;
                 }       
@@ -87,7 +87,7 @@ export default {
                 width: 50%;
 
                 span{
-                    color: #037ef1;
+                    color: $color-follow-us;
                     font-size: 30px;
                     font-family: Arial, Helvetica, sans-serif;
                 }
