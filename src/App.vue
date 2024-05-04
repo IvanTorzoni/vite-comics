@@ -2,6 +2,7 @@
     import AppHeader from './components/AppHeader.vue';
     import AppMain from './components/AppMain.vue';
     import AppIcons from './components/AppIcons.vue';
+    import AppLinks from './components/AppLinks.vue';
     import AppFooter from './components/AppFooter.vue';
 
     export default {
@@ -9,6 +10,7 @@
             AppHeader,
             AppMain,
             AppIcons,
+            AppLinks,
             AppFooter
         }
     }
@@ -20,6 +22,7 @@
         <AppHeader />
         <AppMain />
         <AppIcons />
+        <AppLinks />
         <AppFooter />
     </div>
 
